@@ -1,0 +1,76 @@
+HI, I am a secound year B.Tech Student. 
+
+i want to create a fancey animated Resume Website which contain one single page of index.html.
+inside the index.html i want to add sub pages with costom id ( #home for home section. #projects for projects section. #git for github section and #contact for contact me section) 
+
+my known technlologyes are : 
+Web technlologyes : {HTML, CSS and little bit of java script }
+Programming languages : {Python, C, Java (curentlye lerning)}
+Tools : {Visual studio code, Pycharmp, Replit, Git & github. }
+Expreanced OS : { Linux(Ubuntu & Kali) , Windows }
+
+Designe of the website {
+    contain a single webpage. where loding animation (using html css and little bit of java script) is used when the website is loading (for 4secounds) 
+    after that all the webpage is visiable, befoure that the loading annimationis showing on full screen of the browser window. 
+    background coloure of the website is a dark but eye plicent coloure and the theam of the website is also dark. 
+    
+    :root{
+        ** thi is the root propertey for index.html **
+        ** websiteis enteireley focuse on html and css but there is some little bit use of jave script **
+        this is the propertey for all page 
+        a horizontal line with width of 40% and margin top-bottom of 1vh, aline in center position will be added after all the child div's end 
+        add a drop shadow for ervery section and also on its child section's on the bottom and right side with border of 2 px and margin of .7em
+    }
+
+    <nav>
+        annimation {
+            on scrole down the navigation bar will be disappired witha animation in the top. when the user scrole up the navigation bar will be appared from the top and show again,(uing java script)
+        }
+        a navigatin bar contain 3 button which are reponsive to the designe and contain 
+        "Home" "Projects" "GitHub" 'Resume"
+    </nav>
+
+    #home_section{
+
+        :root{
+            this is the root propertey for #home_section execpt .home_sec_3
+            in this compleate #home_section all child sections are display will be flex
+            but hte mother is not in flex propertey
+        }
+        .home_sec_1{
+            where a 2px ( for mobile or tablate screen) 4px (for bigger screen then tablate) solid vartival line will be placed with height of the container with light green ( ?gpt sujest me a better coloure) coloure in the left side,
+            and in the right side some text will be mainsion probabely a short intro about me and under that a read more button will be placed.
+        }
+        .home_sec_2{
+            where a 2px ( for mobile or tablate screen) 4px (for bigger screen then tablate) solid vartival line will be placed with height of the container with light green ( ?gpt sujest me a better coloure) coloure in the right side,
+            and in the left side some text will be mainsion probabely a table contain my 4 year of academic calender, and bottom of that give a button of __download my Resume__.
+        
+        }
+        .home_sec_3{
+            in this section a slider (add 3 dummy sliders) will be placed where the title is : most recent projects. in the slider {image (add a dummy image) will be placed in the right and in the left some information about the text will be present (add dummy ) at the end of the text in bottom place a button with the text "see more"{this is avalable on all slider's} } and the parent slider will be aumatically slide with out buttons in a loop.
+        }
+    }
+    #project_section{
+        :root{
+            in this section all child sections ar maintaining display flex propertey but the mother is not folloing 
+
+        }
+        .pr_sec_1{
+            heading : project name (dummy text)
+            where a 2px ( for mobile or tablate screen) 4px (for bigger screen then tablate) solid vartival line will be placed with height of the container with light green ( ?gpt sujest me a better coloure) coloure in the left side,
+            and in the right side add some text probelly about the project
+        }
+        .pr_sec_3{
+            heading : project name (dummy text)
+            where a 2px ( for mobile or tablate screen) 4px (for bigger screen then tablate) solid vartival line will be placed with height of the container with light green ( ?gpt sujest me a better coloure) coloure in the right side,
+            and in the left side add some text probelly about the project
+        }
+        .pr_sec_4{
+            heading : project name (dummy text)
+            where a 2px ( for mobile or tablate screen) 4px (for bigger screen then tablate) solid vartival line will be placed with height of the container with light green ( ?gpt sujest me a better coloure) coloure in the left side,
+            and in the right side add some text probelly about the project
+        }
+    }
+
+}
+
