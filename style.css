@@ -1,12 +1,14 @@
 :root {
-  --bg_color: rgb(179, 237, 233);
+  --color: rgb(179, 237, 233);
 }
+
 body {
   background-color: #333335;
-  color: var(--bg_color) !important;
+  color: var(--color) !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
+
 .right {
   overflow: hidden;
   background-color: #333;
@@ -20,25 +22,26 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  text-transform: capitalize;
 }
 
 .right a:hover {
   background-color: #ddd;
   color: black;
 }
+
 .right .icon {
   display: none;
 }
 
+/* Footer */
 footer {
   border-radius: 1.2em;
   box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
   margin-top: 5%;
   padding-top: 20px;
-  /* position: absolute; */
 }
 
-/* Footer */
 .ft-img-container a img {
   width: 3vh;
 }
@@ -55,6 +58,8 @@ footer {
 }
 
 .copyright {
+  max-width: 82%;
+  margin: auto;
   color: rgb(102, 244, 7);
   opacity: 25%;
   text-align: center;
@@ -63,10 +68,12 @@ footer {
 
 /* Add Some Responsive ness for the website */
 
+/* For Smaller Screen  */
 @media screen and (max-width: 600px) {
   .right a:not(:first-child) {
     display: none;
   }
+
   .right a.icon {
     float: right;
     display: block;
@@ -77,39 +84,310 @@ footer {
   .right.responsive {
     position: relative;
   }
+
   .right.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .right.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
+
+  /* .xpc{
+
+    }
+    .adj_txt{
+        display: flex;
+        align-content: space-around;
+    
+    
+    } */
+  .pr_img img {
+    display: none;
+  }
 }
+
+/* For Desktop Tablets and larger screen  */
 @media only screen and (min-width: 600px) {
-  /* For screens larger than 600px */
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
+  .mn {
+    margin-top: 5em;
+  }
+
   /* Additional Styles for child_nav */
-  .child_nav {
+  .right {
+    box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
     position: fixed;
-    top: 50px;
-    text-align: center;
-    /* left: 0; */
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 10px;
+    top: 1em;
+    width: 97.8vw;
+    border-radius: 0.5em;
     z-index: 99;
     transition: top 0.5s ease-in-out;
   }
 
-  .child_nav.hidden {
+  .right.hidden {
     top: -50px;
   }
+
+  .right a:hover {
+    background-color: #ddd;
+    color: rgb(215, 59, 210);
+    border-radius: 0.3em;
+  }
+
+  /* showing  my photo */
+  .xpc {
+    /* parent coontainer for the adj_txt and pr_img img */
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .adj_txt {
+    display: flex;
+    /* align-content: space-around; */
+  }
+
+  .pr_img img {
+    margin-left: 20vw;
+    width: 300px;
+    border: 4px solid yellow;
+    height: fit-content;
+    box-sizing: border-box;
+    height: 300px;
+    border-radius: 400px;
+    margin-top: 10px;
+  }
+}
+
+/* Auto type text  */
+
+.typewrite {
+  color: rgb(199, 111, 223) !important;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.adj {
+  box-shadow: 0px 6px 6px;
+  padding: 0em 2em;
+  border-radius: 0.6em;
+}
+
+/* #Home  */
+.section_1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em;
+  height: 55vh;
+  border-radius: 0.8em;
+  box-shadow: 0px 6px 6px;
+  /* Adjust the height as needed */
+}
+
+/* Line CSS */
+
+.ln1 {
+  width: 5px;
+  height: 410px;
+  margin-left: 0.1em;
+  background: #309fda;
+  position: absolute;
+  /* top: 40px; */
+  /* left: 40px; */
+  margin-top: -3px;
+}
+
+.ln1:before,
+.ln1:after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 90px;
+  position: absolute;
+  left: 50%;
+  background: #0fda1d;
+  margin-left: -9.5px;
+}
+
+.ln1:before {
+  top: -15px;
+}
+
+.ln1:after {
+  bottom: -15px;
+}
+
+/* Line 2  */
+h2 {
+  color: rgb(228, 45, 115);
+}
+
+/* Table styling */
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 4px solid #309fda;
+  /* border-radius: 10px; */
+
+  /*  */
+}
+
+.text-container_1 {
+  margin: 0px 20px;
+  text-transform: capitalize;
+}
+
+.table-container {
+  width: 80vw;
+  /* margin: 0 auto; */
+  margin: 0px 20px;
+  max-width: 80vw;
+  /* height: 100vw; */
+}
+
+th {
+  background-color: #bc1b1b;
+}
+
+tr:nth-child(even) {
+  background-color: #1f8f5a;
+}
+
+th,
+td {
+  /* border: none; */
+  padding: 8px;
+  text-align: center;
+  border-bottom: 2px solid #2210ca;
+}
+
+/* Download link */
+/* #downloadLink{
+    border: 3px solid #0fda1d;
+    padding: .5em;
+    border-radius: 5px;
+
+}
+#downloadLink:hover{
+    background: linear-gradient(45deg, transparent, #ff0000);
+    box-shadow: 0px 2px 2px .4px ;
+    transition: opacity 0.3s ease-in-out;
+    margin-right: 5px;
+} */
+
+#downloadLink {
+  /* display: inline-block; */
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: border-color 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid red;
+}
+
+#downloadLink:hover {
+  border-color: rgb(215, 59, 210);
+  /* Change to your desired color */
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#downloadLink::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, transparent, rgb(215, 59, 210));
+  /* Change to your desired color */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#downloadLink:hover::before {
+  opacity: 1;
+  border-radius: 10px;
+}
+
+/* ack to top  */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-to-top.show {
+  display: block;
+}
+/*Heair me from   */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+.form-container textarea {
+  height: 120px;
+}
+
+.form-container input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #45a049;
 }
