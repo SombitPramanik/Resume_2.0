@@ -84,7 +84,7 @@ window.onload = function () {
 // Download script
 const downloadLink = document.getElementById('downloadLink');
 downloadLink.addEventListener('click', function () {
-  downloadLink.href = '/documents/SOMBIT PRAMANIK RESUME.pdf';
+  downloadLink.href = '/SOMBIT PRAMANIK RESUME.pdf';
 });
 // back to top function
 document.addEventListener('DOMContentLoaded', function() {
