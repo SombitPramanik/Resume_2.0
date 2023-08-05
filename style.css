@@ -32,6 +32,7 @@ body {
 
 .right .icon {
   display: none;
+  margin-right: 2em;
 }
 
 /* Footer */
@@ -78,6 +79,39 @@ footer {
     float: right;
     display: block;
   }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mn {
+    margin-top: 5em;
+  }
+
+  /* Additional Styles for child_nav */
+  .right {
+    box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 1em;
+    width: 97.8vw;
+    border-radius: 0.5em;
+    z-index: 99;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .right.hidden {
+    top: -50px;
+  }
+
+  .right a:hover {
+    background-color: #ddd;
+    color: rgb(215, 59, 210);
+    border-radius: 0.3em;
+  }
+  .bar3 {
+    margin-right: 4px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -96,7 +130,7 @@ footer {
     display: block;
     text-align: left;
   }
-    
+
   .pr_img img {
     display: none;
   }
@@ -315,4 +349,34 @@ td {
 .back-to-top.show {
   display: block;
 }
-/*Heair me from   */
+/*Hair me from   */
+#job {
+  border-radius: 1.2em;
+  box-shadow: 0px 4px 8px 2px;
+  margin-top: 8%;
+  padding: 10px;
+  padding-top: 15px;
+  text-transform: capitalize;
+}
+
+h1 {
+  color: #eb37ff;
+}
+h3 {
+  color: #3780ff;
+}
+.point span {
+  width: 80px;
+  background-color: #0fda1d;
+  border-radius: 2em;
+  margin: 5px;
+  padding: 2px;
+}
+p{
+  padding-left: 10%;
+  max-width: 80%;
+}
+.no_follow{
+  padding: 0% 3%;
+
+}
