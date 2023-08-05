@@ -3,7 +3,7 @@ function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "right") {
     x.className += " responsive";
-    
+
   } else {
     x.className = "right";
   }
@@ -16,13 +16,13 @@ window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
 
   if (prevScrollpos > currentScrollPos) {
-      childNav.classList.remove('hidden');
+    childNav.classList.remove('hidden');
   } else {
-      childNav.classList.add('hidden');
+    childNav.classList.add('hidden');
   }
 
   prevScrollpos = currentScrollPos;
-  
+
 };
 
 // Auto text type :
@@ -41,9 +41,9 @@ TxtType.prototype.tick = function () {
   var fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
@@ -54,26 +54,26 @@ TxtType.prototype.tick = function () {
   if (this.isDeleting) { delta /= 2; }
 
   if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
+    delta = this.period;
+    this.isDeleting = true;
   } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
   }
 
   setTimeout(function () {
-      that.tick();
+    that.tick();
   }, delta);
 };
 window.onload = function () {
   var elements = document.getElementsByClassName('typewrite');
   for (var i = 0; i < elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-      }
+    var toRotate = elements[i].getAttribute('data-type');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
   }
   // INJECT CSS
   var css = document.createElement("style");
@@ -87,22 +87,51 @@ downloadLink.addEventListener('click', function () {
   downloadLink.href = '/SOMBIT PRAMANIK RESUME.pdf';
 });
 // back to top function
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var backToTopBtn = document.getElementById('backToTopBtn');
 
-  window.addEventListener('scroll', function() {
-      if (window.pageYOffset > 300) { // Adjust the scroll height as needed
-          backToTopBtn.classList.add('show');
-      } else {
-          backToTopBtn.classList.remove('show');
-      }
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 300) { // Adjust the scroll height as needed
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
   });
 
-  backToTopBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+  backToTopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
+});
+
+// send mail
+const contactForm = document.getElementById('contact-form');
+const responseMessage = document.getElementById('response-message');
+
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Make a POST request to the server-side PHP script
+  fetch('send_mail.php', {
+    method: 'POST',
+    body: new FormData(contactForm)
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        // Display success message to the user
+        responseMessage.textContent = data.message;
+        responseMessage.style.color = 'green';
+      } else {
+        // Display error message to the user
+        responseMessage.textContent = data.message;
+        responseMessage.style.color = 'red';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 });

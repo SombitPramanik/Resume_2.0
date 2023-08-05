@@ -9,12 +9,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers = "From: $email";
 
     // Send the email
-    $mailSent = mail($to, $subject, $message, $headers);
-
-    if ($mailSent) {
-        echo "success"; // Return success response to the client
+    if (mail($to, $subject, $message, $headers)) {
+        // Success response
+        $response = array(
+            "status" => "success",
+            "message" => "Message sent successfully!"
+        );
     } else {
-        echo "error"; // Return error response to the client
+        // Error response
+        $response = array(
+            "status" => "error",
+            "message" => "Failed to send the message. Please try again later."
+        );
     }
+
+    // Convert the response to JSON and send it to the client
+    header('Content-Type: application/json');
+    echo json_encode($response);
 }
 ?>
