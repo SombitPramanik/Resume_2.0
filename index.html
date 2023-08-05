@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/responsive.css">
   <!-- SEO Stuff like things  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- 3 slide bar source -->
@@ -55,7 +56,7 @@
             <img src="/logo_2_yello.png" alt="">
           </div>
         </div>
-        <br /><br /><br />
+        <br />
         <div class="p1">
           <p>
             Welcome to my website! I'm a passionate second-year
@@ -180,18 +181,98 @@
         </li>
       </ol>
       <div class="noticejob">
-        for more contact me on linkdin or mail me on
-        <a href="mailto:m.sombitpramanik@gmail.com"> my Email</a>
+        for more contact me on <a target="_blank" href="https://www.linkedin.com/in/sombit-pramanik/">LinkedIn</a> or
+        mail me on
+        <a target="_blank" href="mailto:m.sombitpramanik@gmail.com"> Gmail</a>
       </div>
       </p>
     </div>
     <div id="project">
-      
+      <h1>
+        <li>🌟 Projects 🌟</li>
+      </h1>
+      <ol class="pr_ol">
+        <li>
+          <h3>🎯College Website (TPO Page) {Working}</h3>
+          <p>Designed and developed a dynamic TPO (Training and Placement Office) page for the college website. The page
+            features a user-friendly interface, responsive design, and interactive elements to facilitate seamless
+            communication between students, recruiters, and the college administration. Technologies used: HTML, CSS,
+            JavaScript.</p>
+        </li>
+        <li>
+          <h3>🌐Portfolio Website 🚀</h3>
+          <p>Created a personal portfolio website to showcase my skills, projects, and achievements. The website
+            features a
+            visually appealing layout, smooth animations, and a comprehensive overview of my work. Technologies used:
+            HTML,
+            CSS, JavaScript.</p>
+        </li>
+        <li>
+          <h3> ⚕️ The Modern Diagnostic Center (Healthcare Website) ⚕️</h3>
+          <p>Developed an engaging landing page for a modern diagnostic center. The website emphasizes user experience
+            and
+            highlights the center's services, expertise, and facilities. It aims to establish trust among potential
+            patients. Technologies used: HTML, CSS, JavaScript.</p>
+        </li>
+        <li>
+          <h3>🤖Desktop Assistance (Python) 🤖</h3>
+          <p>Designed a desktop assistance application using Python. The application incorporates speech recognition and
+            natural language processing to perform various tasks, such as setting reminders, searching the web, and
+            providing weather updates, all through voice commands.</p>
+        </li>
+        <li>
+          <h3> 📲QR Code Generator (Python) 📲</h3>
+          <p>Implemented a QR code generator using Python. The program allows users to input text or a URL and generates
+            a
+            corresponding QR code that can be easily scanned by mobile devices.</p>
+        </li>
+        <li>
+          <h3> 🖥️🌩️Personal Server with Nextcloud and Cloudflare Tunneling🖥️🌩️</h3>
+          <p>Set up and configured a personal server to host all my projects and serve as my cloud storage solution
+            using
+            Nordcloud. Additionally, implemented Cloudflare Tunneling to ensure secure and reliable access to the server
+            and
+            its services.</p>
+        </li>
+        <li>
+          <h3> 🌐💾 Website Downloader (Python) 🌐💾</h3>
+          <p>Developed a Python script to download web pages from online sources. The script allows users to specify a
+            URL,
+            and it downloads the corresponding HTML, CSS, and images to enable offline browsing of the website.</p>
+        </li>
+      </ol>
+      <h2>🎓📝👨‍💻🚀Conclusion</h2>
+      <p>This portfolio showcases my passion for web development, software creation, and server management. Through
+        these projects, I have honed my skills in various programming languages and technologies. I am excited to
+        continue exploring new ideas and technologies, and I look forward to contributing to the ever-evolving world
+        of tech.</p>
     </div>
-    <div id="connect"></div>
+
+    <div id="connect">
+      <h2>Connect With Me</h2>
+      <p>If you have any questions or would like to discuss a project, feel free to get in touch with me. I'd love to
+        hear from you!</p>
+
+      <form action="send_mail.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
     <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
   </main>
-  <footer id="connect">
+  <footer id="connect_ft">
     <div class="ft-img-container">
       <a href="https://www.facebook.com/sombitpramanik.sombitpramanik/" target="_blank">
         <img src="/facebook.png" alt="Facebook link" /></a>
@@ -203,7 +284,7 @@
         <img src="/git.png" alt="GitHub account" /></a>
     </div>
     <div class="copyright">
-      <span>Made by Sombit With Love <img style="width: 30px;height: 30px; border-radius: 2em;" src="hart.gif" alt="">
+      <span>Made by Sombit With <img style="width: 30px;height: 30px; border-radius: 2em;" src="love.png" alt="  Love">
       </span>
     </div>
   </footer>

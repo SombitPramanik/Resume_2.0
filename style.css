@@ -1,15 +1,37 @@
 :root {
   --color: rgb(179, 237, 233);
 }
-
+/* <<<<<<<<<< Necessary common styles are Here >>>>>>>>>>> */
 body {
   background-color: #333335;
   color: var(--color) !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
+h2 {
+  color: rgb(228, 45, 115);
+}
+h1 {
+  color: #eb37ff;
+}
+h3 {
+  color: #3780ff;
+}
+p {
+  padding-left: 10%;
+  max-width: 80%;
+}
+a {
+  text-decoration: none;
+  color: #bdb237;
+}
+a::before {
+  text-decoration: none;
+}
 
+/* <<<<<<<<<<<<<<< Navigation Bar >>>>>>>>>>>>>> */
 .right {
+  align-self: center;
   overflow: hidden;
   background-color: #333;
 }
@@ -29,171 +51,14 @@ body {
   background-color: #ddd;
   color: black;
 }
-
 .right .icon {
   display: none;
   margin-right: 2em;
 }
 
-/* Footer */
-footer {
-  border-radius: 1.2em;
-  box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 5%;
-  padding-top: 20px;
-}
+/* <<<<<<<<<<<<<<<<<<<< #Home >>>>>>>>>>>>>>>>>>>>>>>>>> */
 
-.ft-img-container a img {
-  width: 3vh;
-}
-
-.ft-img-container a img:hover {
-  transition: 0.4s;
-  transform: scale(1.3);
-}
-
-.ft-img-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 50px;
-}
-
-.copyright {
-  max-width: 82%;
-  margin: auto;
-  color: rgb(102, 244, 7);
-  opacity: 25%;
-  text-align: center;
-  font-size: large;
-}
-
-/* Add Some Responsive ness for the website */
-
-/* For Smaller Screen  */
-@media screen and (max-width: 600px) {
-  .right a:not(:first-child) {
-    display: none;
-  }
-
-  .right a.icon {
-    float: right;
-    display: block;
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .mn {
-    margin-top: 5em;
-  }
-
-  /* Additional Styles for child_nav */
-  .right {
-    box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 1em;
-    width: 97.8vw;
-    border-radius: 0.5em;
-    z-index: 99;
-    transition: top 0.5s ease-in-out;
-  }
-
-  .right.hidden {
-    top: -50px;
-  }
-
-  .right a:hover {
-    background-color: #ddd;
-    color: rgb(215, 59, 210);
-    border-radius: 0.3em;
-  }
-  .bar3 {
-    margin-right: 4px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .right.responsive {
-    position: relative;
-  }
-
-  .right.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .right.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .pr_img img {
-    display: none;
-  }
-}
-
-/* For Desktop Tablets and larger screen  */
-@media only screen and (min-width: 600px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .mn {
-    margin-top: 5em;
-  }
-
-  /* Additional Styles for child_nav */
-  .right {
-    box-shadow: 0px 6px 6px 6px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 1em;
-    width: 97.8vw;
-    border-radius: 0.5em;
-    z-index: 99;
-    transition: top 0.5s ease-in-out;
-  }
-
-  .right.hidden {
-    top: -50px;
-  }
-
-  .right a:hover {
-    background-color: #ddd;
-    color: rgb(215, 59, 210);
-    border-radius: 0.3em;
-  }
-
-  /* showing  my photo */
-  .xpc {
-    /* parent container for the adj_txt and pr_img img */
-    text-align: center;
-    justify-content: space-around;
-  }
-
-  .adj_txt {
-    display: flex;
-    /* align-content: space-around; */
-  }
-
-  .pr_img img {
-    margin-left: 20vw;
-    width: 300px;
-    border: 4px solid yellow;
-    height: fit-content;
-    box-sizing: border-box;
-    height: 300px;
-    border-radius: 400px;
-    margin-top: 10px;
-  }
-}
-
-/* Auto type text  */
+/* <<<<<<<< Auto type text >>>>>>>> */
 
 .typewrite {
   color: rgb(199, 111, 223) !important;
@@ -207,21 +72,20 @@ footer {
   border-radius: 0.6em;
 }
 
-/* #Home  */
 .section_1 {
   display: flex;
   justify-content: space-between;
   margin: 0.2em;
   height: 55vh;
   border-radius: 0.8em;
-  box-shadow: 0px 6px 6px;
+  box-shadow: 0px 4px 8px 2px rgba(125, 94, 225, 0.5);
 }
 
-/* Line CSS */
+/* <<<<<<<<< Line CSS >>>>>> */
 
 .ln1 {
   width: 5px;
-  height: 410px;
+  height: 55vh;
   margin-left: 0.1em;
   background: #309fda;
   position: absolute;
@@ -248,13 +112,7 @@ footer {
   bottom: -15px;
 }
 
-/* Line 2  */
-h2 {
-  color: rgb(228, 45, 115);
-}
-
-/* Table styling */
-
+/* <<<<<<< Table styling >>>>>>> */
 table {
   width: 100%;
   margin-top: 20px;
@@ -284,14 +142,12 @@ tr:nth-child(even) {
 
 th,
 td {
-  /* border: none; */
   padding: 8px;
   text-align: center;
   border-bottom: 2px solid #2210ca;
 }
-
+/* <<<<<< Download Link Style >>>>>>> */
 #downloadLink {
-  /* display: inline-block; */
   padding: 10px 20px;
   border: 2px solid transparent;
   text-align: center;
@@ -329,7 +185,70 @@ td {
   border-radius: 10px;
 }
 
-/* back to top  */
+/* <<<<<<<<<<<<<< Hair me Section >>>>>>>>>>>>>  */
+#job {
+  border-radius: 1.2em;
+  box-shadow: 0px 4px 8px 2px rgba(75, 156, 74, 0.5);
+  margin-top: 8%;
+  padding: 10px;
+  padding-top: 15px;
+  text-transform: capitalize;
+}
+/* <<<<<<<<<<<<<<<< project >>>>>>>>>>>>>>>>>> */
+#project{
+  border-radius: 1.2em;
+  box-shadow: 0px 4px 8px 2px rgba(219, 62, 211, 0.5);
+  margin-top: 8%;
+  padding: 10px;
+  padding-top: 15px;
+  text-transform: capitalize;
+}
+.pr_ol li{
+  list-style-type:none;
+}
+/* <<<<<<<<<<<<<<< connect >>>>>>>>>>> */
+#connect{
+  border-radius: 1.2em;
+  box-shadow: 0px 4px 8px 2px rgba(219, 214, 62, 0.5);
+  margin-top: 8%;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+/* <<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>> */
+footer {
+  border-radius: 1.2em;
+  box-shadow: 0px 5px 10px 2px rgba(0, 255, 0, 0.5);
+  margin-top: 5%;
+  padding-top: 20px;
+}
+
+.ft-img-container a img {
+  width: 3vh;
+}
+
+.ft-img-container a img:hover {
+  transition: 0.4s;
+  transform: scale(1.3);
+}
+
+.ft-img-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 50px;
+}
+
+.copyright {
+  max-width: 82%;
+  margin: auto;
+  color: rgb(102, 244, 7);
+  opacity: 55%;
+  text-align: center;
+  font-size: large;
+}
+
+/*<<<<<<<<<<<< Back To TOP >>>>>>>>>>>>>>>>>>>> */
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -348,35 +267,4 @@ td {
 
 .back-to-top.show {
   display: block;
-}
-/*Hair me from   */
-#job {
-  border-radius: 1.2em;
-  box-shadow: 0px 4px 8px 2px;
-  margin-top: 8%;
-  padding: 10px;
-  padding-top: 15px;
-  text-transform: capitalize;
-}
-
-h1 {
-  color: #eb37ff;
-}
-h3 {
-  color: #3780ff;
-}
-.point span {
-  width: 80px;
-  background-color: #0fda1d;
-  border-radius: 2em;
-  margin: 5px;
-  padding: 2px;
-}
-p{
-  padding-left: 10%;
-  max-width: 80%;
-}
-.no_follow{
-  padding: 0% 3%;
-
 }
