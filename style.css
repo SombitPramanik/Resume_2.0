@@ -211,11 +211,46 @@ td {
   border-radius: 1.2em;
   box-shadow: 0px 4px 8px 2px rgba(219, 214, 62, 0.5);
   margin-top: 8%;
-  padding: 10px;
+  padding: 2em;
   padding-top: 15px;
   text-align: center;
   text-transform: capitalize;
 }
+#connect input{
+  height: 3vh;
+  margin: .8em;
+  border-radius: 2em;
+  border-top: 2px solid red ;
+  border-bottom: 3px solid green;
+}
+#connect textarea{
+  height: 30vh;
+  width: 60vw;
+  margin: .8em;
+  border-radius: 2em;
+  border-top: 2px solid red ;
+  border-bottom: 3px solid green;
+}
+#connect button{
+  border-radius: 2em;
+  height: 4.5vh;
+  width: 50vw;
+}
+.alert,
+.success {
+  width: 400px;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: whitesmoke;
+  padding: 8px 0;
+
+}
+.alert{ background-color: rgb(252,59,59);}
+.success{ background-color: rgb(44,158,24);}
+
 /* <<<<<<<<<<<<<<< Footer >>>>>>>>>>>>>>>>> */
 footer {
   border-radius: 1.2em;

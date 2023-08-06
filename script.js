@@ -107,31 +107,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// send mail
-const contactForm = document.getElementById('contact-form');
-const responseMessage = document.getElementById('response-message');
-
-contactForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  // Make a POST request to the server-side PHP script
-  fetch('send_mail.php', {
-    method: 'POST',
-    body: new FormData(contactForm)
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        // Display success message to the user
-        responseMessage.textContent = data.message;
-        responseMessage.style.color = 'green';
-      } else {
-        // Display error message to the user
-        responseMessage.textContent = data.message;
-        responseMessage.style.color = 'red';
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-});
+// contact from date handling

@@ -7,7 +7,9 @@
     flex-direction: row;
     justify-content: space-around;
   }
-
+  .job_for_open,.pr_ol{
+    display: flex;
+  }
   .mn {
     margin-top: 5em;
   }
